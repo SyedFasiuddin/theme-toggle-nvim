@@ -1,8 +1,20 @@
+use std::io::BufRead;
+
 use winit::event::Event;
 use winit::event::WindowEvent;
 use winit::event_loop::EventLoop;
 use winit::window::Theme;
 use winit::window::WindowBuilder;
+
+fn handle_quit() {
+    std::thread::spawn(|| {
+        for line in std::io::stdin().lock().lines() {
+            if line.unwrap().trim() == "quit" {
+                std::process::exit(0);
+            }
+        }
+    });
+}
 
 fn main() {
     let event_loop = EventLoop::new();
@@ -10,6 +22,8 @@ fn main() {
         .with_visible(false)
         .build(&event_loop)
         .unwrap();
+
+    handle_quit();
 
     if let Some(theme) = window.theme() {
         match theme {
