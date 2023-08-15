@@ -2,9 +2,10 @@ use std::io::BufRead;
 
 use winit::event::Event;
 use winit::event::WindowEvent;
-use winit::event_loop::EventLoop;
+use winit::event_loop::EventLoopBuilder;
 use winit::window::Theme;
 use winit::window::WindowBuilder;
+use winit::platform::macos::*;
 
 fn handle_quit() {
     std::thread::spawn(|| {
@@ -17,7 +18,9 @@ fn handle_quit() {
 }
 
 fn main() {
-    let event_loop = EventLoop::new();
+    let event_loop = EventLoopBuilder::new()
+        .with_activation_policy(ActivationPolicy::Prohibited)
+        .build();
     let window = WindowBuilder::new()
         .with_visible(false)
         .build(&event_loop)
