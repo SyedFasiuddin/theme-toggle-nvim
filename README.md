@@ -1,7 +1,5 @@
 # theme-toggle-nvim
 
-> under active development, works only on MacOS for the moment
-
 The inspiration to make this thing came from another plugin named
 [dark-notify](https://github.com/cormacrelf/dark-notify). What does that plugin
 do? It toggles the theme for neovim when display mode changes but it works only
@@ -39,3 +37,11 @@ use({
     end
 })
 ```
+
+## Tested on these platforms
+
+[x] MacOS (arm)
+[ ] MacOS (x86)
+[x] Windows 10
+[ ] Windows 11
+[ ] Linux
