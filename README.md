@@ -1,6 +1,6 @@
 # theme-toggle-nvim
 
-> under active development, not usable yet
+> under active development, works only on MacOS for the moment
 
 The inspiration to make this thing came from another plugin named
 [dark-notify](https://github.com/cormacrelf/dark-notify). What does that plugin
@@ -16,7 +16,15 @@ check the display mode (and also has ability to do other thing on top of it)
 
 This plugin tries to do the same but in a cross platform way.
 
-## Installation using packer
+## Installation
+
+If you have rust installed then go ahead and install using cargo:
+
+```console
+cargo install --git https://github.com/SyedFasiuddin/theme-toggle-nvim
+```
+
+Then install the plugin (using packer for example)
 
 ```lua
 use({
