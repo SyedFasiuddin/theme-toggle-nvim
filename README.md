@@ -30,8 +30,8 @@ use({
     config = function ()
         require("theme-toggle-nvim").setup({
             colorscheme = {
-                light = "onedark",
-                dark = "gruvbox",
+                light = "delek",
+                dark = "slate",
             }
         })
     end
@@ -40,8 +40,8 @@ use({
 
 ## Tested on these platforms
 
-[x] MacOS (arm)
-[ ] MacOS (x86)
-[x] Windows 10
-[ ] Windows 11
-[ ] Linux
+- [x] MacOS (arm)
+- [ ] MacOS (x86)
+- [x] Windows 10
+- [ ] Windows 11
+- [ ] Linux
